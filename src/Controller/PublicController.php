@@ -8,12 +8,18 @@ use Symfony\Component\Routing\Annotation\Route;
 class PublicController extends AbstractController
 {
     /**
-     * @Route("/", name="public")
+     * @Route("/", name="redirectToIndex")
+     */
+    public function redirectToindex()
+    {
+        return $this->redirectToRoute("public");
+    }
+
+    /**
+     * @Route("/{_locale}/", name="public", requirements={"_locale" : "en|fr"}, methods={"GET"})
      */
     public function index()
     {
-        return $this->render('public/index.html.twig', [
-            'controller_name' => 'PublicController',
-        ]);
+        return $this->render('public/index.html.twig');
     }
 }
