@@ -1,16 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello PublicController!{% endblock %}
+{% block title %}{% trans %}Website's Antoine Smagghe. Web developer and agent for contemporary artists{% endtrans %}{% endblock %}
 
 {% block body %}
 <h1 id="hello">Hello buddy!!</h1>
 <i class="fab fa-apple"></i>
 {% endblock %}
+
 {% block javascripts %}
-{{ parent() }}
-{{ encore_entry_script_tags('SayHello') }}
-<script>
-    const hellobuddy = new SayHello(document.getElementById("hello"), "hello buddy");
-    hellobuddy.init();
-</script>
+{{ encore_entry_script_tags('public_index') }}
 {% endblock %}

@@ -1,5 +1,4 @@
-class SayHello
-{
+export default class SayHello {
     constructor(btn, text)
     {
         this.btn = btn;
