@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block meta %}{% endblock %}
         {{ encore_entry_link_tags('app') }}
         {% block style %}{% endblock %}
     </head>

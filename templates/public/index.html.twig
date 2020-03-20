@@ -1,10 +1,20 @@
 {% extends 'base.html.twig' %}
 
+{% block meta %}{% include "/public/meta.html.twig" %}{% endblock %}
+
 {% block title %}{% trans %}Website's Antoine Smagghe. Web developer and agent for contemporary artists{% endtrans %}{% endblock %}
 
 {% block body %}
-<h1 id="hello">Hello buddy!!</h1>
-<i class="fab fa-apple"></i>
+<header>
+    <ul>
+        <li><a href="#contact">{% trans %}contact{% endtrans %}</a></li>
+        <li><a href="#project">{% trans %}project{% endtrans %}</a></li>
+        <li>{% trans %}language{% endtrans %}</li>
+    </ul>
+</header>
+<h1 id="hello">Antoine Smagghe</h1>
+<section id="contact"></section>
+<section id="project"></section>
 {% endblock %}
 
 {% block javascripts %}
